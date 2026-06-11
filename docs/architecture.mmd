@@ -1,0 +1,42 @@
+flowchart LR
+    subgraph external_sources["External Sources"]
+        A[AISStream]
+        B[Kystverket]
+        C[NOAA AIS]
+        D[Global Fishing Watch]
+        E[Open-Meteo / NOAA Tides]
+    end
+
+    subgraph backend["Backend (FastAPI)"]
+        AGG[AIS Aggregator]
+        VT[Vessel Tracker]
+        AD[Alert / Incident / Collision / Zone Services]
+        API[REST + WebSocket APIs]
+        CEL[Celery Worker + Beat]
+    end
+
+    subgraph data_layer["Data Layer"]
+        PG[(PostgreSQL + PostGIS)]
+        R[(Redis)]
+        GEO[GeoJSON Layers]
+    end
+
+    subgraph frontend["Frontend (React + Vite)"]
+        UI[Map + Ops + Analytics]
+    end
+
+    A --> AGG
+    B --> AGG
+    C --> AGG
+    D --> AGG
+    E --> AD
+    AGG --> VT
+    VT --> R
+    VT --> PG
+    AD --> R
+    AD --> PG
+    CEL --> AD
+    GEO --> API
+    PG --> API
+    R --> API
+    API --> UI

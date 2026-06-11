@@ -1,0 +1,42 @@
+# Sea Tracker
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+.env
+*.log
+*.db
+static/cables.geojson
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Celery
+celerybeat-schedule
+celerybeat-schedule-shm
+celerybeat-schedule-wal
+
+# Frontend
+node_modules/
+dist/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.pytest_cache/
+.codex-screens/

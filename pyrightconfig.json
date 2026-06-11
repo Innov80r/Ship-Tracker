@@ -1,0 +1,8 @@
+{
+  "extraPaths": [
+    "backend"
+  ],
+  "pythonVersion": "3.14",
+  "reportMissingImports": false,
+  "reportMissingModuleSource": false
+}

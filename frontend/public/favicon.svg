@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="sea-tracker-favicon-fill" x1="12" x2="52" y1="10" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee" />
+      <stop offset="1" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#020617" />
+  <path d="M17 38.5 32 15l15 23.5-15 10.5Z" fill="url(#sea-tracker-favicon-fill)" />
+  <path d="M18 46c4.5 2.9 9.2 4.3 14 4.3S41.5 48.9 46 46" fill="none" stroke="#67e8f9" stroke-linecap="round" stroke-width="4" />
+</svg>
